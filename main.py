@@ -1,8 +1,10 @@
 import json
-from pytube import YouTube
+import os
 import re
 import requests
 import urllib.request
+
+from pytube import YouTube
 
 
 artist = input('Artist Name: ')
@@ -23,4 +25,17 @@ def download_video():
 	t[0].download('./audio')
 	print('done downloading')
 
-download_video()
+
+def find_file():
+	download_video()
+	os.chdir('./audio')
+	file = os.listdir()[0]
+	global file_name
+	file_name = song_name.replace(' ', '_') + '.wav'
+	os.rename(file, file_name)
+	file = os.listdir()[0]
+	os.chdir('..')
+	return file
+
+
+find_file()

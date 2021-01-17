@@ -10,7 +10,6 @@ from pytube import YouTube
 from scipy import signal
 from scipy.io import wavfile
 
-
 artist = input('Artist Name: ')
 song_name = input('Song Name: ')
 
@@ -43,12 +42,9 @@ def find_file():
 
 
 def to_mono():
-	# sound = AudioSegment.from_wav('./audio/' + file_name)
-	# sound = sound.set_channels(1)
-	# sound.export('./output/' + file_name, format='wav')
-
-	sound = wave.open('./audio/' + file_name, 'wb')
-	print(sound.getnchannels())
+	sound = AudioSegment.from_file('./audio/' + file_name)
+	sound = sound.set_channels(1)
+	sound.export('./output/' + file_name, format='wav')
 
 find_file()
 to_mono()

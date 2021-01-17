@@ -24,4 +24,5 @@ Make sure to update pip as well, using the command:
 
 ## Step 2: Install the Packages in the Virtual Environment
 Run this command in the terminal in the virtual environment:
+	
 	pip install -r requirements.txt

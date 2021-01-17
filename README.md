@@ -1,5 +1,5 @@
 # Sigmoid-Theta-Hacks
-## Step 1: Create a Virtual Environment
+## Step 1: Create a Virtual Environment (for Macs)
 First make sure that you have virtualenv installed. Run this code in your terminal to install:
 
 	pip install virtualenv

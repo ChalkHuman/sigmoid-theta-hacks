@@ -30,7 +30,11 @@ def getFrequencyMagnitudes(trans_list):
         square_mag = (i.real ** 2 + i.imag ** 2) ** (0.5)
         
         # Converts the fourier value to log scale.
-        log_sq_mag = 10 * math.log10(square_mag)
+        log_sq_mag = 0;
+
+        ''' Don't do the math if value is 0, otherwise it throw exception'''
+        if square_mag != 0:
+            log_sq_mag = 10 * math.log10(square_mag)
         
         result.append(log_sq_mag)
     

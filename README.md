@@ -1,6 +1,10 @@
 # Sigmoid-Theta-Hacks
 ## Step 1: Create a Virtual Environment
-Creating a Virtual Environment in Visual Studio Code Lets say that the name of the virtual environment that you want to create is:
+First make sure that you have virtualenv installed. Run this code in your terminal to install:
+
+	pip install virtualenv
+
+Lets say that the name of the virtual environment that you want to create is:
 	
 	sigmoid-hacks-env
 

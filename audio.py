@@ -6,6 +6,8 @@ import urllib.request
 import wave
 
 from pydub import AudioSegment
+from pydub import AudioSegment
+from pydub.utils import which
 from pytube import YouTube
 from scipy import signal
 from scipy.io import wavfile
@@ -42,6 +44,8 @@ def find_file():
 
 
 def to_mono():
+	file_name = find_file()
+	sound = AudioSegment.converter = which("ffmpeg")
 	sound = AudioSegment.from_file('./audio/' + file_name)
 	sound = sound.set_channels(1)
 	sound.export('./output/' + file_name, format='wav')

@@ -13,7 +13,7 @@ import struct
 from PIL import Image
 import sys
 import os.path
-
+e
 def getFrequencyMagnitudes(trans_list):
     """
     getFrequencyMagnitudes() takes a list of fourier transform values and
@@ -119,4 +119,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-spectrogram('./audio/ew.wav')
+#from audio import find_file
+#file_name = find_file()
+#spectrogram('./audio/'+file_name)
